@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PclNumberConvertors", "PclNumberConvertors\PclNumberConvertors.csproj", "{75AF69B2-A900-42D7-83CC-580AC757C05F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{0B996D37-F261-4E36-BAB5-C406E275FACB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopTesting", "Testing\DesktopTesting\DesktopTesting.csproj", "{CED4D660-4C38-45C8-9851-5E521F3C0321}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PclNumberConverters", "PclNumberConverters\PclNumberConverters.csproj", "{75AF69B2-A900-42D7-83CC-580AC757C05F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,6 +15,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CED4D660-4C38-45C8-9851-5E521F3C0321}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED4D660-4C38-45C8-9851-5E521F3C0321}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED4D660-4C38-45C8-9851-5E521F3C0321}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED4D660-4C38-45C8-9851-5E521F3C0321}.Release|Any CPU.Build.0 = Release|Any CPU
 		{75AF69B2-A900-42D7-83CC-580AC757C05F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{75AF69B2-A900-42D7-83CC-580AC757C05F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75AF69B2-A900-42D7-83CC-580AC757C05F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -18,5 +26,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CED4D660-4C38-45C8-9851-5E521F3C0321} = {0B996D37-F261-4E36-BAB5-C406E275FACB}
 	EndGlobalSection
 EndGlobal

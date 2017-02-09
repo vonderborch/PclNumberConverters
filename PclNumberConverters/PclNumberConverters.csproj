@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{75af69b2-a900-42d7-83cc-580ac757c05f}</ProjectGuid>
+    <ProjectGuid>{75AF69B2-A900-42D7-83CC-580AC757C05F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PclNumberConvertors</RootNamespace>
@@ -35,9 +35,25 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
+    <Folder Include="Bases\" />
+    <Folder Include="UnitConversions\Distance\" />
+    <Folder Include="UnitConversions\Mass\" />
+    <Folder Include="UnitConversions\Temperature\" />
+    <Folder Include="UnitConversions\Time\" />
+    <Folder Include="UnitConversions\Volume\" />
+    <Folder Include="UnitDefinitions\Distance\" />
+    <Folder Include="UnitDefinitions\Mass\" />
+    <Folder Include="UnitDefinitions\Temperature\" />
+    <Folder Include="UnitDefinitions\Time\" />
+    <Folder Include="UnitDefinitions\Volume\" />
+    <Folder Include="Units\Distance\" />
+    <Folder Include="Units\Mass\" />
+    <Folder Include="Units\Temperature\" />
+    <Folder Include="Units\Time\" />
+    <Folder Include="Units\Volume\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="NumeralTypes\Roman.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
@@ -48,5 +64,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
 </Project>
