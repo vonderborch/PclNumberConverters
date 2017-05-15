@@ -8,6 +8,58 @@ namespace PclNumberConverters.Conversions.Time
 {
     public static class Time
     {
+        public static string GetUnitShortPostfix(UtcTime timeUnit)
+        {
+            return TimeUtc.GetUnitShortPostfix(timeUnit);
+        }
+
+        public static string ConvertToStringShortPostfix(decimal value, UtcTime timeUnit)
+        {
+            return TimeUtc.ConvertToStringShortPostfix(value, timeUnit);
+        }
+
+        public static string ConvertToStringFullPostfix(decimal value, UtcTime timeUnit)
+        {
+            return TimeUtc.ConvertToStringFullPostfix(value, timeUnit);
+        }
+
+        public static UtcTime? GetUtcTimeDefinitionFromUnitName(string unit, bool ignoreCapitalization = false)
+        {
+            return TimeUtc.GetTimeDefinitionFromUnitName(unit, ignoreCapitalization);
+        }
+
+        public static UtcTime? GetUtcTimeDefinitionFromUnitPostfix(string unit, bool ignoreCapitalization = false)
+        {
+            return TimeUtc.GetTimeDefinitionFromUnitPostfix(unit, ignoreCapitalization);
+        }
+
+        public static string GetUnitShortPostfix(SiTime timeUnit)
+        {
+            return TimeSI.GetUnitShortPostfix(timeUnit);
+        }
+
+        public static string ConvertToStringShortPostfix(decimal value, SiTime timeUnit)
+        {
+            return TimeSI.ConvertToStringShortPostfix(value, timeUnit);
+        }
+
+        public static string ConvertToStringFullPostfix(decimal value, SiTime timeUnit)
+        {
+            return TimeSI.ConvertToStringFullPostfix(value, timeUnit);
+        }
+
+        public static SiTime? GetSiTimeDefinitionFromUnitName(string unit, bool ignoreCapitalization = false)
+        {
+            return TimeSI.GetTimeDefinitionFromUnitName(unit, ignoreCapitalization);
+        }
+
+        public static SiTime? GetSiTimeDefinitionFromUnitPostfix(string unit, bool ignoreCapitalization = false)
+        {
+            return TimeSI.GetTimeDefinitionFromUnitPostfix(unit, ignoreCapitalization);
+        }
+
+
+
         public static decimal ConvertTime(decimal value, SiTime fromUnit, SiTime toUnit)
         {
             return TimeSI.Convert(value, fromUnit, toUnit);

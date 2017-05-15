@@ -31,7 +31,7 @@ namespace PclNumberConverters.Conversions.Time
 
     public static class TimeSI
     {
-        public static Dictionary<SiTime, string> CommonUnits = new Dictionary<SiTime, string>()
+        public static Dictionary<SiTime, string> Postfixes = new Dictionary<SiTime, string>()
         {
             { SiTime.PlanckTime, "tp" },
             { SiTime.Yoctosecond, "ys" },
@@ -77,7 +77,7 @@ namespace PclNumberConverters.Conversions.Time
 
         public static string GetUnitShortPostfix(SiTime timeUnit)
         {
-            var units = CommonUnits;
+            var units = Postfixes;
 
             string output;
             if (units.TryGetValue(timeUnit, out output))
@@ -87,7 +87,7 @@ namespace PclNumberConverters.Conversions.Time
 
         public static string ConvertToStringShortPostfix(decimal value, SiTime timeUnit)
         {
-            var units = CommonUnits;
+            var units = Postfixes;
 
             string output;
             if (units.TryGetValue(timeUnit, out output))
@@ -104,7 +104,7 @@ namespace PclNumberConverters.Conversions.Time
         {
             var siTimeStr = $"{typeof(SiTime).ToString()}.";
             Dictionary<string, SiTime> units = new Dictionary<string, SiTime>();
-            foreach (var tUnit in CommonUnits)
+            foreach (var tUnit in Postfixes)
                 units.Add(tUnit.Key.ToString().Replace(siTimeStr, ""), tUnit.Key);
 
             if (!units.ContainsKey(unit)) return null;
@@ -120,12 +120,12 @@ namespace PclNumberConverters.Conversions.Time
 
         public static SiTime? GetTimeDefinitionFromUnitPostfix(string unit, bool ignoreCapitalization = false)
         {
-            if (!CommonUnits.ContainsValue(unit)) return null;
+            if (!Postfixes.ContainsValue(unit)) return null;
 
             var comp = ignoreCapitalization
                             ? StringComparison.OrdinalIgnoreCase
                             : StringComparison.Ordinal;
-            foreach (var tUnit in CommonUnits)
+            foreach (var tUnit in Postfixes)
                 if (string.Equals(tUnit.Value, unit, comp)) return tUnit.Key;
 
             return null;
