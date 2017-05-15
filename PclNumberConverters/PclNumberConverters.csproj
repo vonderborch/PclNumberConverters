@@ -8,8 +8,8 @@
     <ProjectGuid>{75AF69B2-A900-42D7-83CC-580AC757C05F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PclNumberConvertors</RootNamespace>
-    <AssemblyName>PclNumberConvertors</AssemblyName>
+    <RootNamespace>PclNumberConverters</RootNamespace>
+    <AssemblyName>PclNumberConverters</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -36,23 +36,17 @@
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
     <Folder Include="Bases\" />
-    <Folder Include="UnitConversions\Distance\" />
-    <Folder Include="UnitConversions\Mass\" />
-    <Folder Include="UnitConversions\Temperature\" />
-    <Folder Include="UnitConversions\Time\" />
-    <Folder Include="UnitConversions\Volume\" />
-    <Folder Include="UnitDefinitions\Distance\" />
-    <Folder Include="UnitDefinitions\Mass\" />
-    <Folder Include="UnitDefinitions\Temperature\" />
-    <Folder Include="UnitDefinitions\Time\" />
-    <Folder Include="UnitDefinitions\Volume\" />
-    <Folder Include="Units\Distance\" />
-    <Folder Include="Units\Mass\" />
-    <Folder Include="Units\Temperature\" />
-    <Folder Include="Units\Time\" />
-    <Folder Include="Units\Volume\" />
+    <Folder Include="Conversions\Area\" />
+    <Folder Include="Conversions\Length\" />
+    <Folder Include="Conversions\Mass\" />
+    <Folder Include="Conversions\Volume\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conversions\Temperature\Temperature.cs" />
+    <Compile Include="Conversions\Time\Time.cs" />
+    <Compile Include="Conversions\Time\TimeSI.cs" />
+    <Compile Include="Conversions\Time\TimeUtc.cs" />
+    <Compile Include="Math\PclMath.cs" />
     <Compile Include="NumeralTypes\Roman.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -10,7 +10,11 @@ namespace DesktopTesting
     {
         static void Main(string[] args)
         {
-            var result = PclNumberConverters.NumeralTypes.Roman.IntFromRomanNumerals("DCXXI");
+            var result1 = PclNumberConverters.NumeralTypes.Roman.IntFromRomanNumerals("DCXXI");
+
+            var result2 = PclNumberConverters.Units.Time.SITime.Convert(100, PclNumberConverters.Units.Time.SITimeDefinition.Second, PclNumberConverters.Units.Time.SITimeDefinition.Terasecond);
+
+            if (true) ;
         }
     }
 }
